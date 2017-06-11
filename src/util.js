@@ -13,6 +13,10 @@ function* naturalNumberGenerator(min = 0) {
   }
 }
 
+function getRandomValue(min, max) {
+  return Math.floor(min + (max - min + 1) * Math.random());
+}
+
 function testSorted(smallToLarge, arr) {
   for (let i = 1; i < arr.length; i++) {
     if (arr[i - 1] === arr[i]) continue;
@@ -24,6 +28,7 @@ function testSorted(smallToLarge, arr) {
 }
 
 function swap(pos1, pos2, arr) {
+  if (pos1 === pos2) return;
   const tmp = arr[pos1];
   arr[pos1] = arr[pos2];
   arr[pos2] = tmp;
@@ -54,3 +59,4 @@ exports.randomValueGenerator = randomValueGenerator;
 exports.generateRandomArr = generateRandomArr;
 exports.generateNearlyOrderedArr = generateNearlyOrderedArr;
 exports.naturalNumberGenerator = naturalNumberGenerator;
+exports.getRandomValue = getRandomValue;

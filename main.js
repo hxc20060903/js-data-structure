@@ -1,7 +1,7 @@
 const debug = require('../node_modules/debug')('debug');
 const _ = require('./node_modules/lodash');
 
-const sort = require('./src/mergeSortBottomUp');
+const sort = require('./src/quickSort3Way');
 const util = require('./src/util');
 
 const time = 20;
@@ -21,7 +21,7 @@ let getSmallToLarge;
 const tests = Array.apply(null, Array(time)).map(() =>
   () => new Promise((resolve, reject) => {
     try {
-      const array = util.generateRandomArr(100000, 10000);
+      const array = util.generateRandomArr(50000, 100000);
       // const array = [ 242, 542, 979, 113, 356, 941, 543, 335, 444, 216 ];
       debug('start --------');
       // debug(array);
