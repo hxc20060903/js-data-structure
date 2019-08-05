@@ -2,7 +2,6 @@
   "extends": "eslint-config-airbnb",
   "parser": "babel-eslint",
   "globals": {
-    "If": true,
     "Else": true,
     "$": true,
     "browser": true
